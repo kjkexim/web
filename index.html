@@ -6,128 +6,96 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
-body {
+body{
     font-family: Arial, Helvetica, sans-serif;
-    background: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+    background:#f4f4f4;
+    color:#333;
 }
 
-/* Header */
-header {
-    background: #111;
-    color: white;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header{
+    background:#111;
+    color:white;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-header h1 {
-    font-size: 24px;
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
+nav a{
+    color:white;
+    text-decoration:none;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
+nav a:hover{color:#d4af37;}
+
+.hero{
+    height:75vh;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+               url("img/grapes.jpg") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
 }
 
-nav a:hover {
-    color: #d4af37;
+.hero h2{font-size:45px;margin-bottom:15px;}
+
+.section{
+    padding:70px 40px;
+    text-align:center;
 }
 
-/* Hero */
-.hero {
-    height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url("https://images.unsplash.com/photo-1506806732259-39c2d0268443") center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
+.section h2{
+    margin-bottom:40px;
+    font-size:32px;
 }
 
-.hero h2 {
-    font-size: 45px;
-    margin-bottom: 15px;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
 }
 
-.hero p {
-    font-size: 18px;
+.card{
+    background:white;
+    border-radius:8px;
+    overflow:hidden;
+    transition:0.3s;
 }
 
-/* Sections */
-.section {
-    padding: 70px 40px;
-    text-align: center;
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
 }
 
-.section h2 {
-    margin-bottom: 40px;
-    font-size: 32px;
-    color: #111;
+.card h3{margin:15px 0 10px;}
+
+.card p{
+    padding:0 15px 20px;
+    font-size:14px;
+    color:#666;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
-.card {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: 0.3s;
-}
-
-.card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-
-.card h3 {
-    margin: 15px 0 10px 0;
-}
-
-.card p {
-    padding: 0 15px 20px 15px;
-    font-size: 14px;
-    color: #666;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* About */
-.about {
-    background: #fff;
-    padding: 70px 40px;
-    text-align: center;
-}
-
-/* Footer */
-footer {
-    background: #111;
-    color: #ccc;
-    text-align: center;
-    padding: 20px;
+footer{
+    background:#111;
+    color:#ccc;
+    text-align:center;
+    padding:20px;
 }
 </style>
 </head>
@@ -135,89 +103,73 @@ footer {
 <body>
 
 <header>
-    <h1>KJK EXIM</h1>
-    <nav>
-        <ul>
-            <li><a href="#agro">Agro</a></li>
-            <li><a href="#handicrafts">Handicrafts</a></li>
-            <li><a href="#leather">Leather</a></li>
-            <li><a href="#spices">Spices</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
-    </nav>
+<h1>KJK EXIM</h1>
+<nav>
+<ul>
+<li><a href="#agro">Agro</a></li>
+<li><a href="#handicrafts">Handicrafts</a></li>
+<li><a href="#leather">Leather</a></li>
+<li><a href="#spices">Spices</a></li>
+</ul>
+</nav>
 </header>
 
 <section class="hero">
-    <div>
-        <h2>Global Exporters of Premium Products</h2>
-        <p>Delivering Quality Agricultural, Handcrafted, Leather & Spice Products Worldwide</p>
-    </div>
+<div>
+<h2>Global Exporters of Premium Products</h2>
+<p>Agricultural • Handicrafts • Leather • Spices</p>
+</div>
 </section>
 
-<!-- Agricultural Products -->
+<!-- Agricultural -->
 <section id="agro" class="section">
-    <h2>Agricultural Products</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Grains">
-            <h3>Grains & Cereals</h3>
-            <p>High-quality export-grade grains sourced directly from farmers.</p>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399" alt="Fruits">
-            <h3>Fresh Produce</h3>
-            <p>Fresh agricultural produce meeting global standards.</p>
-        </div>
-    </div>
+<h2>Agricultural Products</h2>
+<div class="grid">
+
+<div class="card"><img src="img/grapes.jpg"><h3>Fresh Grapes</h3></div>
+<div class="card"><img src="img/pomegranate.jpg"><h3>Pomegranate</h3></div>
+<div class="card"><img src="img/onion.jpg"><h3>Onion</h3></div>
+<div class="card"><img src="img/maize baby.jpg"><h3>Baby Maize</h3></div>
+<div class="card"><img src="img/veg.jpg"><h3>Mixed Vegetables</h3></div>
+
+</div>
 </section>
 
 <!-- Handicrafts -->
 <section id="handicrafts" class="section">
-    <h2>Handicrafts</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6" alt="Handicrafts">
-            <h3>Traditional Crafts</h3>
-            <p>Authentic handcrafted products made by skilled artisans.</p>
-        </div>
-    </div>
+<h2>Handicrafts</h2>
+<div class="grid">
+<div class="card"><img src="img/handicraft.jpg"><h3>Traditional Handicrafts</h3></div>
+</div>
 </section>
 
-<!-- Leather Products -->
+<!-- Leather -->
 <section id="leather" class="section">
-    <h2>Leather Products</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1585386959984-a41552231658" alt="Leather Bags">
-            <h3>Leather Goods</h3>
-            <p>Premium leather bags, wallets, and accessories.</p>
-        </div>
-    </div>
+<h2>Leather Products</h2>
+<div class="grid">
+
+<div class="card"><img src="img/belt.jpg"><h3>Leather Belts</h3></div>
+<div class="card"><img src="img/leather wallet.jpg"><h3>Leather Wallet</h3></div>
+<div class="card"><img src="img/wallat.jpg"><h3>Premium Wallets</h3></div>
+
+</div>
 </section>
 
 <!-- Spices -->
 <section id="spices" class="section">
-    <h2>Spices</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443" alt="Spices">
-            <h3>Organic Spices</h3>
-            <p>Export-quality spices with rich aroma and flavor.</p>
-        </div>
-    </div>
-</section>
+<h2>Spices</h2>
+<div class="grid">
 
-<section id="about" class="about">
-    <h2>About KJK EXIM</h2>
-    <p>
-        KJK EXIM is committed to delivering high-quality export products 
-        including agricultural goods, handicrafts, leather products, and spices.
-        We focus on ethical sourcing, premium quality, and global trade excellence.
-    </p>
+<div class="card"><img src="img/chili.jpg"><h3>Dry Chili</h3></div>
+<div class="card"><img src="img/cardamom.jpg"><h3>Cardamom</h3></div>
+<div class="card"><img src="img/zera.jpg"><h3>Cumin (Zera)</h3></div>
+<div class="card"><img src="img/spices.jpg"><h3>Mixed Spices</h3></div>
+
+</div>
 </section>
 
 <footer>
-    <p>&copy; 2026 KJK EXIM. All Rights Reserved.</p>
+<p>&copy; 2026 KJK EXIM. All Rights Reserved.</p>
 </footer>
 
 </body>
