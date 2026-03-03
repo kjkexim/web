@@ -14,22 +14,15 @@ body{
     color:#333;
 }
 
-/* HEADER */
 header{
     background:#111;
     color:white;
-    padding:15px 30px;
+    padding:20px 40px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    flex-wrap:wrap;
 }
 
-header h1{
-    font-size:22px;
-}
-
-/* NAVIGATION */
 nav ul{
     list-style:none;
     display:flex;
@@ -39,12 +32,10 @@ nav ul{
 nav a{
     color:white;
     text-decoration:none;
-    font-size:15px;
 }
 
 nav a:hover{color:#d4af37;}
 
-/* HERO */
 .hero{
     height:75vh;
     background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
@@ -54,27 +45,18 @@ nav a:hover{color:#d4af37;}
     align-items:center;
     text-align:center;
     color:white;
-    padding:20px;
 }
 
-.hero h2{
-    font-size:45px;
-    margin-bottom:15px;
-}
+.hero h2{font-size:45px;margin-bottom:15px;}
 
-.hero p{
-    font-size:18px;
-}
-
-/* SECTIONS */
 .section{
-    padding:60px 30px;
+    padding:70px 40px;
     text-align:center;
 }
 
 .section h2{
     margin-bottom:40px;
-    font-size:30px;
+    font-size:32px;
 }
 
 .grid{
@@ -96,32 +78,29 @@ nav a:hover{color:#d4af37;}
     object-fit:cover;
 }
 
-.card h3{
-    margin:15px 0;
-    font-size:18px;
-}
+.card h3{margin:15px 0 10px;}
 
 .card:hover{
     transform:translateY(-8px);
     box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* CONTACT */
+/* Contact Section */
 .contact{
     background:#111;
     color:white;
-    padding:50px 20px;
+    padding:60px 40px;
     text-align:center;
 }
 
 .contact h2{
     margin-bottom:25px;
-    font-size:26px;
+    font-size:30px;
 }
 
 .contact p{
     margin:10px 0;
-    font-size:16px;
+    font-size:18px;
 }
 
 .contact a{
@@ -129,61 +108,12 @@ nav a:hover{color:#d4af37;}
     text-decoration:none;
 }
 
-/* FOOTER */
 footer{
     background:#000;
     color:#ccc;
     text-align:center;
-    padding:15px;
-    font-size:14px;
+    padding:20px;
 }
-
-/* ========================= */
-/* MOBILE RESPONSIVE STYLES */
-/* ========================= */
-
-@media (max-width: 768px){
-
-    header{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    nav ul{
-        flex-direction:column;
-        gap:12px;
-        margin-top:10px;
-    }
-
-    .hero{
-        height:60vh;
-    }
-
-    .hero h2{
-        font-size:28px;
-    }
-
-    .hero p{
-        font-size:15px;
-    }
-
-    .section{
-        padding:40px 20px;
-    }
-
-    .section h2{
-        font-size:24px;
-    }
-
-    .card img{
-        height:180px;
-    }
-
-    .contact p{
-        font-size:15px;
-    }
-}
-
 </style>
 </head>
 
@@ -236,6 +166,7 @@ footer{
 <div class="card"><img src="img/leather wallet.jpg"><h3>Leather Wallet</h3></div>
 <div class="card"><img src="img/wallat.jpg"><h3>Premium Wallets</h3></div>
 <div class="card"><img src="img/leather-bag.jpg"><h3>Premium Bag</h3></div>
+
 </div>
 </section>
 
