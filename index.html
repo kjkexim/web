@@ -1,261 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>KJK EXIM | Global Export Company</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>KJK EXIM | Global Export Company</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        /* Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            background-color: #f5f5f5;
-            color: #333;
-        }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
 
-        /* Header */
-        header {
-            background: #111;
-            color: white;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+/* Header */
+header {
+    background: #111;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .logo h1 {
-            font-size: 24px;
-        }
+header h1 {
+    font-size: 24px;
+}
 
-        .logo p {
-            font-size: 12px;
-            color: #ccc;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+}
 
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-        }
+nav a:hover {
+    color: #d4af37;
+}
 
-        nav a:hover {
-            color: #d4af37;
-        }
+/* Hero */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("https://images.unsplash.com/photo-1506806732259-39c2d0268443") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
 
-        /* Hero Section */
-        .hero {
-            height: 70vh;
-            background: url("src/1.jpg") center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
+.hero h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
 
-        .hero-content {
-            background: rgba(0,0,0,0.6);
-            padding: 40px;
-            color: white;
-            border-radius: 5px;
-        }
+.hero p {
+    font-size: 18px;
+}
 
-        .hero h2 {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
+/* Sections */
+.section {
+    padding: 70px 40px;
+    text-align: center;
+}
 
-        .hero p {
-            margin-bottom: 20px;
-        }
+.section h2 {
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #111;
+}
 
-        .btn {
-            text-decoration: none;
-            background: #d4af37;
-            color: black;
-            padding: 10px 20px;
-            font-weight: bold;
-            border-radius: 4px;
-        }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
 
-        .btn:hover {
-            background: #b8962e;
-        }
+.card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.3s;
+}
 
-        /* Products */
-        .products {
-            padding: 60px 40px;
-            text-align: center;
-        }
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
 
-        .products h2 {
-            margin-bottom: 40px;
-            font-size: 30px;
-        }
+.card h3 {
+    margin: 15px 0 10px 0;
+}
 
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-        }
+.card p {
+    padding: 0 15px 20px 15px;
+    font-size: 14px;
+    color: #666;
+}
 
-        .product-card {
-            background: white;
-            border-radius: 8px;
-            padding: 15px;
-            transition: 0.3s;
-        }
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
 
-        .product-card img {
-            width: 100%;
-            border-radius: 5px;
-        }
+/* About */
+.about {
+    background: #fff;
+    padding: 70px 40px;
+    text-align: center;
+}
 
-        .product-card h3 {
-            margin: 10px 0;
-        }
-
-        .product-card p {
-            font-size: 14px;
-            color: #666;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-        }
-
-        /* About */
-        .about {
-            background: #fff;
-            padding: 60px 40px;
-            text-align: center;
-        }
-
-        .about h2 {
-            margin-bottom: 20px;
-        }
-
-        /* Contact */
-        .contact {
-            padding: 60px 40px;
-            text-align: center;
-            background: #fafafa;
-        }
-
-        .contact p {
-            margin: 5px 0;
-        }
-
-        /* Footer */
-        footer {
-            background: #111;
-            color: #ccc;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+/* Footer */
+footer {
+    background: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+}
+</style>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <h1>KJK EXIM</h1>
-            <p>Global Exporters of Indigenous & Handcrafted Products</p>
+<header>
+    <h1>KJK EXIM</h1>
+    <nav>
+        <ul>
+            <li><a href="#agro">Agro</a></li>
+            <li><a href="#handicrafts">Handicrafts</a></li>
+            <li><a href="#leather">Leather</a></li>
+            <li><a href="#spices">Spices</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h2>Global Exporters of Premium Products</h2>
+        <p>Delivering Quality Agricultural, Handcrafted, Leather & Spice Products Worldwide</p>
+    </div>
+</section>
+
+<!-- Agricultural Products -->
+<section id="agro" class="section">
+    <h2>Agricultural Products</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Grains">
+            <h3>Grains & Cereals</h3>
+            <p>High-quality export-grade grains sourced directly from farmers.</p>
         </div>
-
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h2>Bringing Tradition to the Global Market</h2>
-            <p>Premium handcrafted goods and indigenous products exported worldwide.</p>
-            <a href="#products" class="btn">Explore Our Collection</a>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399" alt="Fruits">
+            <h3>Fresh Produce</h3>
+            <p>Fresh agricultural produce meeting global standards.</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Products -->
-    <section id="products" class="products">
-        <h2>Our Products</h2>
-
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="src/1.jpg" alt="Leather Products">
-                <h3>Leather Collection</h3>
-                <p>Premium handmade leather goods crafted by skilled artisans.</p>
-            </div>
-
-            <div class="product-card">
-                <img src="src/2.jpg" alt="Indigenous Jewelry">
-                <h3>Indigenous Jewelry</h3>
-                <p>Authentic jewelry reflecting traditional artistry.</p>
-            </div>
-
-            <div class="product-card">
-                <img src="src/3.jpg" alt="Organic Spices">
-                <h3>Organic Spices</h3>
-                <p>High-quality spices sourced directly from local farmers.</p>
-            </div>
-
-            <div class="product-card">
-                <img src="src/4.jpg" alt="Handicrafts">
-                <h3>Handicrafts</h3>
-                <p>Beautiful handmade crafts representing cultural heritage.</p>
-            </div>
-
-            <div class="product-card">
-                <img src="src/5.jpg" alt="Custom Export Orders">
-                <h3>Bulk Export Orders</h3>
-                <p>Customized export solutions for international buyers.</p>
-            </div>
+<!-- Handicrafts -->
+<section id="handicrafts" class="section">
+    <h2>Handicrafts</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6" alt="Handicrafts">
+            <h3>Traditional Crafts</h3>
+            <p>Authentic handcrafted products made by skilled artisans.</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- About -->
-    <section id="about" class="about">
-        <h2>About KJK EXIM</h2>
-        <p>
-            KJK EXIM is a global export company committed to delivering high-quality 
-            indigenous products and handcrafted goods to international markets.
-            We support local artisans and ensure ethical sourcing and premium standards.
-        </p>
-    </section>
+<!-- Leather Products -->
+<section id="leather" class="section">
+    <h2>Leather Products</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1585386959984-a41552231658" alt="Leather Bags">
+            <h3>Leather Goods</h3>
+            <p>Premium leather bags, wallets, and accessories.</p>
+        </div>
+    </div>
+</section>
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <p>Email: info@kjkexim.com</p>
-        <p>Phone: +00 123 456 7890</p>
-        <p>Location: Your Region, Country</p>
-    </section>
+<!-- Spices -->
+<section id="spices" class="section">
+    <h2>Spices</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443" alt="Spices">
+            <h3>Organic Spices</h3>
+            <p>Export-quality spices with rich aroma and flavor.</p>
+        </div>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 KJK EXIM. All Rights Reserved.</p>
-    </footer>
+<section id="about" class="about">
+    <h2>About KJK EXIM</h2>
+    <p>
+        KJK EXIM is committed to delivering high-quality export products 
+        including agricultural goods, handicrafts, leather products, and spices.
+        We focus on ethical sourcing, premium quality, and global trade excellence.
+    </p>
+</section>
+
+<footer>
+    <p>&copy; 2026 KJK EXIM. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
