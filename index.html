@@ -14,7 +14,7 @@ body{
     color:#333;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 header{
     background:#111;
     color:white;
@@ -33,28 +33,93 @@ nav ul{
 nav a{
     color:white;
     text-decoration:none;
+    font-weight:500;
 }
 
-nav a:hover{color:#d4af37;}
+nav a:hover{
+    color:#d4af37;
+}
 
-/* HERO */
+/* ================= HERO ================= */
 .hero{
-    height:75vh;
-    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    min-height:90vh;
+    background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
                url("img/expo.jpg") center/cover no-repeat;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
     color:white;
+    padding:60px 20px;
 }
 
-.hero h2{font-size:45px;margin-bottom:15px;}
+.hero-content{
+    max-width:900px;
+}
 
-/* SECTIONS */
+.hero h2{
+    font-size:48px;
+    font-weight:700;
+    margin-bottom:20px;
+    letter-spacing:1px;
+}
+
+.hero .tagline{
+    font-size:20px;
+    color:#d4af37;
+    margin-bottom:25px;
+    font-weight:600;
+}
+
+.hero p{
+    font-size:17px;
+    line-height:1.7;
+    margin-bottom:15px;
+    color:#ddd;
+}
+
+.hero-buttons{
+    margin-top:35px;
+}
+
+.hero-buttons a{
+    display:inline-block;
+    padding:14px 28px;
+    margin:10px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s ease;
+}
+
+.btn-primary{
+    background:#d4af37;
+    color:#111;
+}
+
+.btn-primary:hover{
+    background:#b9972f;
+}
+
+.btn-outline{
+    border:2px solid #d4af37;
+    color:#d4af37;
+}
+
+.btn-outline:hover{
+    background:#d4af37;
+    color:#111;
+}
+
+/* ================= SECTIONS ================= */
 .section{
     padding:70px 40px;
     text-align:center;
+    background:white;
+}
+
+.section:nth-child(even){
+    background:#f8f9fb;
 }
 
 .section h2{
@@ -70,7 +135,7 @@ nav a:hover{color:#d4af37;}
 
 .card{
     background:white;
-    border-radius:8px;
+    border-radius:10px;
     overflow:hidden;
     transition:0.3s;
 }
@@ -81,15 +146,16 @@ nav a:hover{color:#d4af37;}
     object-fit:cover;
 }
 
-.card h3{margin:15px 0 20px;}
+.card h3{
+    margin:15px 0 20px;
+}
 
 .card:hover{
     transform:translateY(-8px);
     box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* ================= CONTACT SECTION ================= */
-
+/* ================= CONTACT ================= */
 .contact{
     background:#f8f9fb;
     padding:80px 40px;
@@ -127,16 +193,11 @@ nav a:hover{color:#d4af37;}
     border-radius:50%;
 }
 
-.contact-info div{
-    font-size:16px;
-}
-
 .contact-info strong{
     display:block;
     margin-bottom:5px;
 }
 
-/* FORM */
 .contact-form{
     background:white;
     padding:40px;
@@ -174,23 +235,25 @@ nav a:hover{color:#d4af37;}
     background:#0b5ed7;
 }
 
-/* RESPONSIVE */
-@media(max-width:768px){
-    .contact-wrapper{
-        grid-template-columns:1fr;
-    }
-
-    .hero h2{
-        font-size:28px;
-    }
-}
-
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer{
     background:#000;
     color:#ccc;
     text-align:center;
     padding:20px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+    .contact-wrapper{
+        grid-template-columns:1fr;
+    }
+    .hero h2{
+        font-size:30px;
+    }
+    .hero p{
+        font-size:15px;
+    }
 }
 </style>
 </head>
@@ -213,47 +276,31 @@ footer{
 <!-- HERO -->
 <section class="hero">
 <div class="hero-content">
-
 <h2>Global Exporters of Premium Products</h2>
-
-<p class="tagline">
-Agricultural • Handicrafts • Leather • Spices
-</p>
-
-<p>
-KJK EXIM is a trusted export and trading company based in India,
-delivering high-quality products tailored to international business needs.
-</p>
-
-<p>
-We specialize in building long-term global partnerships through reliable service,
-strict quality assurance, and competitive pricing.
-</p>
-
-<p>
-Every shipment we deliver carries our promise of excellence and trust.
-</p>
+<p class="tagline">Agricultural • Handicrafts • Leather • Spices</p>
+<p>KJK EXIM is a trusted export and trading company based in India, delivering high-quality products tailored to international business needs.</p>
+<p>We specialize in building long-term global partnerships through reliable service, strict quality assurance, and competitive pricing.</p>
+<p>Every shipment we deliver carries our promise of excellence and trust.</p>
 
 <div class="hero-buttons">
 <a href="#contact" class="btn-primary">Request a Quote</a>
 <a href="#agro" class="btn-outline">View Products</a>
 </div>
-
 </div>
 </section>
 
-<!-- Agricultural -->
+<!-- AGRICULTURAL -->
 <section id="agro" class="section">
 <h2>Agricultural Products</h2>
 <div class="grid">
 <div class="card"><img src="img/grapes.jpg"><h3>Fresh Grapes</h3></div>
 <div class="card"><img src="img/pomegranate.jpg"><h3>Pomegranate</h3></div>
 <div class="card"><img src="img/onion.jpg"><h3>Onion</h3></div>
-<div class="card"><img src="img/basmati-rice.jpg"><h3>Basmati Rice</h3></div>
+<div class="card"><img src="img/veg.jpg"><h3>Mixed Vegetables</h3></div>
 </div>
 </section>
 
-<!-- Handicrafts -->
+<!-- HANDICRAFTS -->
 <section id="handicrafts" class="section">
 <h2>Handicrafts</h2>
 <div class="grid">
@@ -261,7 +308,7 @@ Every shipment we deliver carries our promise of excellence and trust.
 </div>
 </section>
 
-<!-- Leather -->
+<!-- LEATHER -->
 <section id="leather" class="section">
 <h2>Leather Products</h2>
 <div class="grid">
@@ -272,7 +319,7 @@ Every shipment we deliver carries our promise of excellence and trust.
 </div>
 </section>
 
-<!-- Spices -->
+<!-- SPICES -->
 <section id="spices" class="section">
 <h2>Spices</h2>
 <div class="grid">
